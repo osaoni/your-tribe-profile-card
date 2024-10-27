@@ -7,25 +7,21 @@
   justify-items: center;
   align-items: center;
 
-  background-image:
-		repeating-conic-gradient(
-			transparent,
-			rgba(0, 0, 0, 0.89),
-			transparent 180deg
-		),
-    repeating-radial-gradient(
-			black 0 1%,
-			#222 1% 2%,
-			black 2%
-		);
-    
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    
-    animation:spin 3s infinite linear;
-   
-    
+  background-image: repeating-conic-gradient(
+      transparent,
+      rgba(0, 0, 0, 0.89),
+      transparent 180deg
+    ),
+    repeating-radial-gradient(black 0 1%, #222 1% 2%, black 2%);
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+  animation: spin 3s infinite linear;
+
+  z-index: 1;
+  position: relative;
 }
 
 .sticker {
@@ -34,28 +30,32 @@
   background-color: purple;
   border-radius: 50%;
   object-fit: cover;
-  
 }
 
 @keyframes spin {
-	to {
-		rotate:1turn;
-	}
+  to {
+    rotate: 1turn;
+  }
 }
 
-.cover{
+.cover {
   width: 30em;
   height: 30em;
   background-color: rgb(207, 3, 3);
   border-radius: 3%;
 
   display: grid;
-  justify-items:center;
+  justify-items: center;
   align-items: center;
- 
+
+  z-index: 10;
+  position: relative;
 }
 
 figure {
   margin: 0;
   margin-top: 2em;
+
+  z-index: 10;
+  position: relative;
 }
